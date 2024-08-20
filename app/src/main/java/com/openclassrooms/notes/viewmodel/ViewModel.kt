@@ -1,10 +1,6 @@
 package com.openclassrooms.notes.viewmodel
 
-import com.openclassrooms.notes.model.Note
 import com.openclassrooms.notes.repository.NotesRepository
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 
 /**
  * MainViewModel is responsible for preparing and managing the data for the {@link activity_main}.
@@ -13,7 +9,7 @@ import kotlinx.coroutines.flow.flow
  * <p>
  * This ViewModel is integrated with Hilt for dependency injection.
  */
-@HiltViewModel
+
 class ViewModel() {
 
     /**

@@ -1,10 +1,7 @@
 package com.openclassrooms.notes
 
-import android.provider.ContactsContract.CommonDataKinds.Note
 import com.openclassrooms.notes.repository.NotesRepository
 import com.openclassrooms.notes.service.LocalNotesApiService
-import com.openclassrooms.notes.service.NotesApiService
-import kotlinx.coroutines.flow.count
 import org.junit.Test
 
 import org.junit.Assert.*
