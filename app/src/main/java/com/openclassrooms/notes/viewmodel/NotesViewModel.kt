@@ -1,6 +1,11 @@
 package com.openclassrooms.notes.viewmodel
 
+import androidx.lifecycle.ViewModel
+import com.openclassrooms.notes.model.Note
 import com.openclassrooms.notes.repository.NotesRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
 /**
  * MainViewModel is responsible for preparing and managing the data for the {@link activity_main}.
@@ -9,11 +14,11 @@ import com.openclassrooms.notes.repository.NotesRepository
  * <p>
  * This ViewModel is integrated with Hilt for dependency injection.
  */
-
-class ViewModel() {
+@HiltViewModel
+class NotesViewModel @Inject constructor(repository : NotesRepository) : ViewModel() {
 
     /**
      * Fetches the list of notes in the repository.
      */
-    val notesGetRepository = NotesRepository().notes
+    val notesGetRepository : Flow<List<Note>> = repository.notes
 }

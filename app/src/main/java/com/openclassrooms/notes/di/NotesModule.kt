@@ -26,7 +26,7 @@ object NotesModule {
 
     @Singleton
     @Provides
-    fun provideNotesRepository(context:Context) : NotesRepository{
+    fun provideNotesRepository() : NotesRepository{
         return NotesRepository()
     }
 }
